@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <script>
+        const Dev_environemt='dev';
+        const Test_environemt='test';
+        const Stage_environemt='stage';
+        const Prod_environemt='prod';
+
+        var environment="test";
+        
+        const amount=100;
+        var sendAmount;
+       switch(environment){
+        case Dev_environemt:
+        sendAmount= amount + amount *.10;
+        break;
+        case Test_environemt:
+        sendAmount= amount + amount * .20;
+        break;
+        case Stage_environemt:
+        sendAmount= amount +  amount * .30;
+        break;
+
+        case Prod_environemt:
+        sendAmount = amount + amount * 0.05;
+        break;
+        default:
+
+       }
+               console.log(+sendAmount);
+    </script>
+</body>
+
+</html>
+
+
+<!-- //Decleare a variables (environemnt) with value based on the environemnt changing the sending the amount
+//for dev environemnt it should be adding 10% and test 20%, stage 30%, prod 5%.
+//and display sending amount. -->
