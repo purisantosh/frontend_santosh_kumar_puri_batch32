@@ -1,14 +1,14 @@
-let hobbies = ["Playing Guiter", "Cricket", "Chess", "Playing Cricket"]
+let hobbies = [ "Cricket", "Chess", "video games", "Watching movies"]
 
 
 function init() {
-    let hobbySelect = document.getElementById('hobby list');
+    let hobbySelect = document.getElementById('add-hobby');
     hobbySelect.innerHTML = "";
     for (let i = 0; i < hobbies.length; i++) {
         hobbySelect.options[hobbySelect.options.length] = new Option(hobbies[i]);
     }
 
-    let delhobbySelect = document.getElementById('hobby del list'); 
+    let delhobbySelect = document.getElementById('hobby-del-list'); 
     delhobbySelect.innerHTML = "";
     for (let i = 0; i < hobbies.length; i++) {
         delhobbySelect.options[delhobbySelect.options.length] = new Option(hobbies[i]);
@@ -23,7 +23,8 @@ function getAllHobbies() {
     return hobbies;
 }
 
-function addNewHobby() {
+
+function addHobby() {
     let newHobby = document.getElementById('add-hobby').value
     newHobby=newHobby.trim();
     let flag=false;
@@ -43,8 +44,8 @@ function addNewHobby() {
   
 }
 
-function removeHobbyFromList() {
-    let e = document.getElementById("hobby-list-del");
+function removeHobby() {
+    let e = document.getElementById("hobby-del-list");
     let hobby = e.options[e.selectedIndex].value;
     let temp = []
     for (let i = 0; i < hobbies.length; i++) {

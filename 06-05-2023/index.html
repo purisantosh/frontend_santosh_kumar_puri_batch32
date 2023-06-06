@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="FirstName">First Name:</label>
+     <input type="text" id="Firstname"  /> <br>
+     <label for="LastName">Last Name:</label>
+      <input type="text" id="Lastname" /> <br>
+      <label for="DOB">DOB:</label>
+    <input type="text" id="DOB" /> <br>
+    <label for="Email:">Email:</label>
+    <input type="text" id="Email" /> <br>
+    <label for="Phone Number">Phone Number:</label>
+    <input type="text" id="Phonenumber" /> <br>
+   
+    <button onclick="displayvalues()">Submit </button>
+</div>
+    <p id="display_values"></p>    
+
+    <script >
+        function displayvalues()
+        {
+            var Firstname= document.getElementById('Firstname').value;
+
+var Lastname= document.getElementById('Lastname').value;
+
+var DOB= document.getElementById('DOB').value;
+
+var email = document.getElementById("Email").value;
+
+var PhoneNumber = document.getElementById("Phonenumber").value;
+
+document.getElementById('display_values').innerHTML=
+            "Firstname: " +Firstname+
+            "Lastname :" +Lastname+
+            "DOB :" +DOB+
+            "email : "+email+
+            "Phone Number:" +PhoneNumber;
+
+
+        }
+    </script>
+</body>
+</html>

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Document</title>
 </head>
 <body>
     <div align="center">
         <div>
-          Hobbies List :
-          <select name="hobbies" id="hobby-list">
-           </select>
-           
-             Enter Hobby : <input type="text" id="add-hobby">
-             <input type="button" value="Add Hobby" onclick="addNewHobby()"><br>
-             <select name="hobbies" id="hobby-list-del">
-             </select>
-             <input type="button" value="Delete Hobby" onclick="removeHobbyFromList()"><br>
             
+          Hobbies List :
+          <select name="hobbies" id="add-hobby"> </select><br>
+          
+             Enter Hobby : <input type="text" id="add-hobby"> 
+             
+
+             <input type="button" value="Add Hobby" onclick="addHobby()"><br>
+
+             <select name="hobbies" id="hobby-del-list"> </select>
+             <input type="button" value="Delete Hobby" onclick="removeHobby()"><br>
+         
             </div>
      </div>
      <script src="abc.js"></script>
