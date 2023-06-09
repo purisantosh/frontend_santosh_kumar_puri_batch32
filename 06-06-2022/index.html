@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+   
+    <form id="form">
+   <div> <label for="firstname"> First Name </label>
+        <input type="text" id="firstname" required /> </div>
+        <div> <label for="lastname"> Last Name </label>
+        <input type="text" id="lastname" required /> </div>
+        <div> <label for="gender">Gender </label>
+        <input type="radio" id="male" name="gender" />
+        <label for="male">Male </label>
+        <input type="radio" id="female" name="gender"/>
+        <label for="female"> Female</label> </div>
+        <div> <label for="email">Email </label>
+        <input type="email" id="email" /> </div>
+        <div>  <label for="phone">PhoneNumber</label>
+        <input type="text" id="phone" /> </div>
+        <div>   <label for="dob"> DOB </label>
+        <input type="date" id="dob" /> </div>
+        <div>  <label for="hobbies"> Hobbies </label>
+        <input type="checkbox" id="Cricket" class="hobbies" value="Cricket">
+        <label for="hobby1">Cricket</label>
+        <input type="checkbox" id="Badminton" class="hobbies" value="Badminton">
+        <label for="hobby2">Badminton</label>
+        <input type="checkbox" id="Reading" class="hobbies" value="Reading">
+        <label for="hobby3">Reading</label>
+        <input type="checkbox" id="Singing" class="hobbies" value="Singing">  
+        <label for="hobby4">Singing</label>  </div>
+        <button type="submit">Submit </button>
+
+        
+    </form> 
+</div>
+
+    <p id="display_values"></p>
+
+    <script>
+        const form = document.getElementById("form");
+        form.addEventListener("submit",(event)=>
+        {
+            event.preventDefault()
+            let s="";
+            s= s + document.getElementById('firstname').value ;   
+          s+=document.getElementById('lastname').value;
+        //   var gender = document.querySelector('input[name="gender"]:checked').value;
+        s= s + document.getElementById('email').value;
+        s= s + document.getElementById('phone').value;
+        s= s + document.getElementById('dob').value;
+        // console.log(s);
+          var hobbiesList = "";
+          var hobbyCheckboxes = document.getElementsByClassName('hobbies');
+          for (var i = 0; i < hobbyCheckboxes.length; i++) {
+            if (hobbyCheckboxes[i].checked) {
+              hobbiesList += hobbyCheckboxes[i].value +" ";
+            }
+          }
+          
+          s=s+hobbiesList;
+         // console.log(s);
+          document.getElementById('display_values').innerHTML=s;
+    //  document.getElementById('display_values').innerHTML=
+    //        "Firstname: " +firstname+
+    //        "Lastname :" +lastname+
+    //         "email : "+email+
+    //        "Phone Number:" +phone;
+    //        +"DOB:"+dob+
+    //       "hobies"+hobbies
+         }) 
+          
+         </script>
+</body>
+</html>
